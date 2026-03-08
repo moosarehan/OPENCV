@@ -1,0 +1,10 @@
+import cv2
+img = cv2.imread('images/board.jfif')
+resize=cv2.resize(img,(600,800))
+print(resize.shape)
+cv2.line(resize, (50, 50), (550, 50), (0, 255, 0), 4)
+cv2.rectangle(resize, (100, 100), (500, 300), (255, 0, 0), 3)
+cv2.circle(resize, (300, 500), 70, (0, 0, 255), -1)
+cv2.putText(resize, "OpenCV Drawing", (200, 240), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, ), 2)
+cv2.imshow('SHAPES',resize)
+cv2.waitKey(0)
